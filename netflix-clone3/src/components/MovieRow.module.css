@@ -1,0 +1,10 @@
+.rowContainer {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.rowContainer::-webkit-scrollbar {
+  display: none;
+}
+

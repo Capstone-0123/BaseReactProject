@@ -8,7 +8,7 @@ dist/
 dist-ssr/
 build/
 *.local
-
+.env
 # Environment variables
 .env
 .env.local
