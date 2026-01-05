@@ -1,0 +1,117 @@
+.row {
+  margin-bottom: 40px;
+  padding: 0 60px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--netflix-white);
+  margin-bottom: 15px;
+  padding-left: 4px;
+}
+
+.sliderContainer {
+  position: relative;
+}
+
+.swiper {
+  overflow: visible;
+}
+
+.slide {
+  height: auto;
+}
+
+.navButton {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 55px;
+  background: rgba(20, 20, 20, 0.5);
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+.sliderContainer:hover .navButton {
+  opacity: 1;
+}
+
+.navButton:hover {
+  background: rgba(20, 20, 20, 0.8);
+}
+
+.navButton svg {
+  width: 40px;
+  height: 40px;
+  color: var(--netflix-white);
+}
+
+.prevButton {
+  left: -55px;
+  border-radius: 4px 0 0 4px;
+}
+
+.nextButton {
+  right: -55px;
+  border-radius: 0 4px 4px 0;
+}
+
+.navButton.hidden {
+  display: none;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .row {
+    padding: 0 40px;
+  }
+
+  .prevButton {
+    left: -40px;
+    width: 40px;
+  }
+
+  .nextButton {
+    right: -40px;
+    width: 40px;
+  }
+
+  .navButton svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    padding: 0 20px;
+  }
+
+  .title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .prevButton {
+    left: 0;
+    width: 30px;
+  }
+
+  .nextButton {
+    right: 0;
+    width: 30px;
+  }
+
+  .navButton svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
