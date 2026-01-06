@@ -1,25 +1,25 @@
-import { Link, useNavigate } from 'react-router-dom'
-import { useAuthStore } from '@/stores/authStore'
-import { useState, useEffect } from 'react'
-import styles from './Navbar.module.css'
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuthStore } from '@/stores/authStore';
+import { useState, useEffect } from 'react';
+import styles from './Navbar.module.css';
 
 // Intentional SSR-breaking: window access at module top-level
-const isScrolled = window.scrollY > 0
+const isScrolled = window.scrollY > 0;
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(isScrolled)
-  const { isAuthenticated, logout } = useAuthStore()
-  const navigate = useNavigate()
+  const [scrolled, setScrolled] = useState(isScrolled);
+  const { isAuthenticated, logout } = useAuthStore();
+  const navigate = useNavigate();
 
   // Intentional SSR-breaking: scroll event listener
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 0)
-    }
+      setScrolled(window.scrollY > 0);
+    };
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <nav
@@ -27,8 +27,8 @@ export default function Navbar() {
         scrolled ? 'bg-netflix-black' : 'bg-transparent'
       }`}
     >
-      <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-        <Link to="/browse" className="text-netflix-red text-3xl font-bold">
+      <div className="flex items-center justify-between px-8 py-4 mx-auto max-w-7xl">
+        <Link to="/browse" className="text-3xl font-bold text-netflix-red">
           NETFLIX
         </Link>
         <div className="flex items-center gap-6">
@@ -42,8 +42,8 @@ export default function Navbar() {
               </Link>
               <button
                 onClick={() => {
-                  logout()
-                  navigate('/')
+                  logout();
+                  navigate('/');
                 }}
                 className="text-white hover:text-gray-300"
               >
@@ -58,6 +58,5 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-  )
+  );
 }
-
