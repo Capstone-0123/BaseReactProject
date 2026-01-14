@@ -1,0 +1,12 @@
+.movieCard {
+  transition: transform 0.3s ease;
+}
+
+.movieCard:hover {
+  z-index: 10;
+}
+
+.overlay {
+  transition: background-opacity 0.3s ease;
+}
+

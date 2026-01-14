@@ -1,0 +1,16 @@
+// 주석 처리: Next.js는 단일 tsconfig.json 사용
+// 기존 Vite 설정 파일이므로 참고용으로만 유지
+
+// {
+//   "compilerOptions": {
+//     "composite": true,
+//     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+//     "skipLibCheck": true,
+//     "module": "ESNext",
+//     "moduleResolution": "bundler",
+//     "allowSyntheticDefaultImports": true,
+//     "strict": true,
+//     "noEmit": true
+//   },
+//   "include": ["vite.config.ts"]
+// }
