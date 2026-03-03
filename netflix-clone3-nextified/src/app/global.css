@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  background-color: #141414;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Intentional SSR-breaking: document access would be here in JS */
+/* Note: This is intentional for migration testing - JS code removed from CSS */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* App-level styles */
+.app-container {
+  min-height: 100vh;
+}
